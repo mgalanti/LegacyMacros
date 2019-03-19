@@ -1,0 +1,40 @@
+# # # Example of a top-level configuration file for the chi analysis job
+# # #
+# # # All lines with three or more words are considered as comments and not parsed
+# # # 
+# # # All lines with one or two words separated by space are parsed
+# # # Lines having the form WORD1 WORD2 assign the value WORD2 to the property named WORD1
+# # # Lines having the form WORD1 assign an empty string to the property named WORD1
+# # # Lines having the form INCLUDE NAME trigger the parsing of the file named NAME 
+# # #
+
+# # # Dataset definition
+INCLUDE ChiAnalysisProperties/datasets.txt
+
+# # # Definition of the selection and of the corresponding data-driven prompt templates
+INCLUDE ChiAnalysisProperties/selection_muonV6Pt4_jetPFV1Pt10.txt
+
+# # # Inputs to use for building the inclusive-sign IP templates
+INCLUDE ChiAnalysisProperties/inputs_inclusivesign.txt
+
+# # # Default configuration of the IP fit
+INCLUDE ChiAnalysisProperties/defaults_IPFit.txt
+
+# # # Default configuration of the PtRel fit
+INCLUDE ChiAnalysisProperties/defaults_PtRelFit.txt
+
+# # # Top-level configuration entries follow
+
+# # # Number of events in the producer jobs
+# # # Set to -1 to process all events in the ntuples
+MaxEvents -1
+
+# # # Which steps of the analysis to run
+RunProducers 1
+RunBuilders 0
+RunFit 0
+
+# # # If different from 0, triggers the creation of a separate working directory
+# # # In which all the steps are run
+CreateWorkingDirectory 1
+RedirectOutputToFile 1
