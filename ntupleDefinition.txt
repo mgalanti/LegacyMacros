@@ -1,0 +1,195 @@
+    NAME                                     TYPE                                          COMMENT
+
+
+    // general stuff
+    evNumber                                 int
+    runNumber                                int
+    lumiSection                              int
+
+
+
+    // Beam spot
+    beamSpot_x                               double
+    beamSpot_y                               double
+    beamSpot_z                               double
+
+
+
+    // Primary vertices
+    numberOfVertex                           int
+    PV_x                                     std::vector<double> *
+    PV_y                                     std::vector<double> *
+    PV_z                                     std::vector<double> *
+    PV_xError                                std::vector<double> *
+    PV_yError                                std::vector<double> *
+    PV_zError                                std::vector<double> *
+    PV_ndof                                  std::vector<double> *
+    PV_normalizedChi2                        std::vector<double> *
+    PV_isFake                                std::vector<bool> *
+
+
+
+    // track stuff
+    numberOfTrack                            int
+    Track_pt                                 std::vector<double> *
+    Track_ptError                            std::vector<double> *
+    Track_eta                                std::vector<double> *
+    Track_etaError                           std::vector<double> *
+    Track_phi                                std::vector<double> *
+    Track_phiError                           std::vector<double> *
+    Track_dxy_BS                             std::vector<double> *
+*** Track_dxy_PV                             std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Track_dxyError_PV                        std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Track_dxyz_PV                            std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Track_dxyzError_PV                       std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Track_dz_PV                              std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Track_dzError_PV                         std::vector<std::vector<double> > *           With respect to all primary vertices
+    Track_dxy                                std::vector<double> *
+    Track_dxyError                           std::vector<double> *
+    Track_dz                                 std::vector<double> *
+    Track_dzError                            std::vector<double> *
+    Track_d0                                 std::vector<double> *
+    Track_d0Error                            std::vector<double> *
+    Track_normalizedChi2                     std::vector<double> *
+    Track_dEdx1                              std::vector<double> *
+    Track_chi2                               std::vector<double> *
+    Track_ndof                               std::vector<double> *
+    Track_vCovLowerBlock                     std::vector< std::vector<double> > *          Lower block of track covariance matrix
+    Track_innerOk                            std::vector<bool> *
+    Track_isHighPurity                       std::vector<bool> *
+    Track_validPixelHits                     std::vector<unsigned short> *
+    Track_validTIBHits                       std::vector<unsigned short> *
+    Track_validTIDHits                       std::vector<unsigned short> *
+    Track_validTOBHits                       std::vector<unsigned short> *
+    Track_validTECHits                       std::vector<unsigned short> *
+*** Track_hitPattern                         std::vector< std::vector<unsigned short> > *  Bitmask - see below for a description
+    Track_referencePoint_x                   std::vector<double> *
+    Track_innerPosition_x                    std::vector<double> *
+    Track_outerPosition_x                    std::vector<double> *
+    Track_referencePoint_y                   std::vector<double> *
+    Track_innerPosition_y                    std::vector<double> *
+    Track_outerPosition_y                    std::vector<double> *
+    Track_referencePoint_z                   std::vector<double> *
+    Track_innerPosition_z                    std::vector<double> *
+    Track_outerPosition_z                    std::vector<double> *
+    Track_charge                             std::vector<short> *
+    Track_jetRef                             std::vector<unsigned short> *
+    Track_algo                               std::vector<unsigned short> *
+    Track_numberOfValidHits                  std::vector<unsigned short> *
+    Track_numberOfLostHits                   std::vector<unsigned short> *
+    Track_quality                            std::vector<short> *
+    Track_vGenprefByChi2                     std::vector< std::vector<unsigned short> > *  DEPRECATED
+    Track_vGenpChi2                          std::vector< std::vector<double> > *          DEPRECATED
+*** Track_vGenprefByHits                     std::vector< std::vector<unsigned short> > *  Vector of indices of genp associated by hits
+*** Track_vGenpQualityByHits                 std::vector< std::vector<double> > *          Quality (0...1) of association by hits
+    DeltaR_clst                              std::vector<double> *                         DEPRECATED
+    DeltaPt_clst                             std::vector<double> *                         DEPRECATED
+    Genp_idx_clst                            std::vector<unsigned short> *                 DEPRECATED
+
+
+
+    // jet stuff
+    numberOfJet                              int
+    Jet_pt                                   std::vector<double> *
+    Jet_energy                               std::vector<double> *
+    Jet_eta                                  std::vector<double> *
+    Jet_phi                                  std::vector<double> *
+    Jet_ecfr                                 std::vector<double> *
+    Jet_enfr                                 std::vector<double> *
+    Jet_hcfr                                 std::vector<double> *
+    Jet_hnfr                                 std::vector<double> *
+    Jet_mass                                 std::vector<double> *
+    Jet_ene_c3                               std::vector<double> *
+    Jet_vTrackref                            std::vector< std::vector<unsigned short> > *  Vector of indices of tracks associated to jet
+
+
+
+    // GenP stuff
+    Genp_status                              std::vector<unsigned short> *                 Genp status - see below for a description
+    Genp_Id                                  std::vector<int> *
+    Genp_vMom                                std::vector< std::vector<unsigned short> > *
+    Genp_vDau                                std::vector< std::vector<unsigned short> > *
+    Genp_charge                              std::vector<float> *
+    Genp_pt                                  std::vector<double> *
+    Genp_eta                                 std::vector<double> *
+    Genp_phi                                 std::vector<double> *
+    Genp_mass                                std::vector<double> *
+    Genp_vx                                  std::vector<double> *
+    Genp_vy                                  std::vector<double> *
+    Genp_vz                                  std::vector<double> *
+*** Genp_dxy_PV                              std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Genp_dxyError_PV                         std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Genp_dxyz_PV                             std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Genp_dxyzError_PV                        std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Genp_dz_PV                               std::vector<std::vector<double> > *           With respect to all primary vertices
+*** Genp_dzError_PV                          std::vector<std::vector<double> > *           With respect to all primary vertices
+
+
+
+    // Muon stuff
+    numberOfMuon                             int
+    Muon_type                                std::vector<unsigned short> *                 Bitmask from muon reconstruction (see below)
+    Muon_selmask                             std::vector<unsigned int> *                   Bitmask from muon identification (see below)
+    Muon_pt                                  std::vector<double> *
+    Muon_eta                                 std::vector<double> *
+    Muon_phi                                 std::vector<double> *
+    Muon_charge                              std::vector<short> *
+    Muon_numberOfMatches                     std::vector<unsigned short> *                 Number of muon chambers with matched segments
+    Muon_globalChi2                          std::vector<double> *                         Chi2 of global (TK+MU) track fit
+    Muon_isTracker                           std::vector<bool> *                           Extract from type bitmask
+    Muon_isGlobal                            std::vector<bool> *                           Extract from type bitmask
+    Muon_isGlobalMuonPromptTight             std::vector<bool> *                           Extract from selmask bitmask
+    Muon_isTMLastStationTight                std::vector<bool> *                           Extract from selmask bitmask
+    Muon_isTMLastStationAngTight             std::vector<bool> *                           Extract from selmask bitmask
+    Muon_isTMLastStationOptimizedLowPtTight  std::vector<bool> *                           Extract from selmask bitmask
+*** Muon_globalValidMuonHits                 std::vector<unsigned short> *                 Muon hits from global (TK+MU) track fit
+*** Muon_globalValidCSCHits                  std::vector<unsigned short> *                 Muon hits from global (TK+MU) track fit
+*** Muon_globalValidDTHits                   std::vector<unsigned short> *                 Muon hits from global (TK+MU) track fit
+*** Muon_globalValidRPCHits                  std::vector<unsigned short> *                 Muon hits from global (TK+MU) track fit
+*** Muon_outerValidMuonHits                  std::vector<unsigned short> *                 Muon hits from outer (MU) track fit
+*** Muon_outerValidCSCHits                   std::vector<unsigned short> *                 Muon hits from outer (MU) track fit
+*** Muon_outerValidDTHits                    std::vector<unsigned short> *                 Muon hits from outer (MU) track fit
+*** Muon_outerValidRPCHits                   std::vector<unsigned short> *                 Muon hits from outer (MU) track fit
+    Muon_trackref                            std::vector<unsigned short> *                 Index of tracker track
+*** Muon_hasTriggered                        std::vector<bool> *                           True if triggered HLT_DoubleMu3 (trigger hardcoded)
+
+
+
+DESCRIPTION OF Track_hitPattern BITMASK
+      +-----+-----+-----+-----+-----+-----+-----+-----+----------------+-----+-----+
+      |tk/mu|  sub-structure  |   sub-sub-structure   |     stereo     |  hit type |
+      +-----+-----+-----+-----+-----+-----+-----+-----+----------------+-----+-----+
+      | 10  |   9    8     7  |   6    5     4     3  |        2       |  1     0  | bit
+
+      |tk = 1      PXB = 1            layer = 1-3                       hit type = 0-3
+      |tk = 1      PXF = 2            disk  = 1-2                       hit type = 0-3
+      |tk = 1      TIB = 3            layer = 1-4      0=rphi,1=stereo  hit type = 0-3
+      |tk = 1      TID = 4            wheel = 1-3      0=rphi,1=stereo  hit type = 0-3
+      |tk = 1      TOB = 5            layer = 1-6      0=rphi,1=stereo  hit type = 0-3
+      |tk = 1      TEC = 6            wheel = 1-9      0=rphi,1=stereo  hit type = 0-3
+
+ Hit type definition:
+      valid    = valid hit                                     = 0
+      missing  = detector is good, but no rec hit found        = 1
+      inactive = detector is off, so there was no hope         = 2
+      bad      = there were many bad strips within the ellipse = 3
+
+
+
+DESCRIPTION OF Genp_status CODE
+      1-3 PYTHIA particles
+      4-7 Not used
+      8   GEANT particles (including PYTHIA particles repropagated by GEANT)
+
+
+
+DESCRIPTION OF Muon_type BITMASK
+      +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+      |    Calo   |Standalone |  Tracker  |  Global   |  Unused   |
+      +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+      |     4     |     3     |     2     |     1     |     0     | bit
+
+
+
+DESCRIPTION OF Muon_selmask BITMASK
+     TBD
