@@ -1,0 +1,15 @@
+SmearedPtRelTemplatesString
+FitMinPtRel 0.
+FitMaxPtRel 3.5
+RebinFactorPtRel 50
+RemoveBinPtRel 0
+FitTemplatesPtRel 0
+UseDFromDataPtRel 0
+CombineDAndCPtRel 0
+TemplatesToUseFor1DPtRelFit d
+# # # TemplatesToUseFor2DPtRelFit bb;bs;ss;bl;sl;ll
+TemplatesToUseFor2DPtRelFit bb
+
+ConstrainPtRel 0
+ConstrainToComponentPtRel -1;-1;0;-1;-1;0
+ConstrainSumToComponentPtRel 310

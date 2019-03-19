@@ -1,0 +1,23 @@
+VariableToUsePtRel PtOutJet
+TemplateClassificationPtRel SimplifiedMergedV2
+# # # Empty string means inclusive sign
+TemplateSignPtRel
+
+# # # InputHistoNumbersForStep1FakePtRelDistributions 1;2;3;4;5
+# # # OutputHistoNamesForStep1FakePtRelDistributions B;C;P;D;F
+# # # InputHistoNamesForFakePtRelDistributions hbb
+InputHistoNamesForFakePtRelDistributions hMuonPtOutJetSimplifiedMergedV22DTemplate_11
+# # # InputHistoNamesForFakePtRelDistributions hb;hs
+# # # NEventsPerEachFakePtRelComponent 29925-14472-1973-8422-2189-16112
+NEventsPerEachFakePtRelComponent 25000
+
+Use2DDistributionsPtRel 1
+# 0 = use real ptrel, 1 = use fake ptrel with factorization, 2 = use fake ptrel without factorization
+UseFakePtRel 2
+
+# If this flag is 1, then the input histo name below is not used and the default one is found from the other configuration flags
+UseDefaultInputHistoNamePtRelDistribution 1
+InputHistoNamePtRelDistribution hMuonPtOutJetSimplifiedMergedV2Template_1
+
+FitResult1DFileNameIP ChiAnalysisIPWorkflow_1383139665_Inclusive_1D/FitResultsDxy1D_muonV6Pt4_jetPFV1Pt10__.txt
+FitResult2DFileNameIP ChiAnalysisIPWorkflow_1382984466_Inclusive/FitResultsDxy2D_muonV6Pt4_jetPFV1Pt10__.txt

@@ -1,0 +1,18 @@
+VariableToUseIP Dxy
+TemplateClassificationIP SimplifiedMergedSS
+# # # Empty string means inclusive sign
+TemplateSignIP SS
+
+# # # InputHistoNumbersForStep1FakeIPDistributions 1;2;3;4;5
+# # # OutputHistoNamesForStep1FakeIPDistributions B;C;P;D;F
+# # # InputHistoNamesForFakeIPDistributions hCC;hBC;hCC;hDD
+InputHistoNamesForFakeIPDistributions hMuonDxySimplifiedMerged2DTemplateSS_14
+# # # InputHistoNamesForFakeIPDistributions hB;hC
+NEventsPerEachFakeIPComponent 12000-5000-6000-8000
+
+Use2DDistributionsIP 0
+UseFakeIP 0
+
+# If this flag is 1, then the input histo name below is not used and the default one is found from the other configuration flags
+UseDefaultInputHistoNameIPDistribution 1
+InputHistoNameIPDistribution 

@@ -1,0 +1,17 @@
+SmearedIPTemplatesString
+FitMinIP 0.
+FitMaxIP 0.2
+RebinFactorIP 4
+RemoveBinIP 0
+FitTemplatesIP 1
+UsePromptFromDataIP 0
+# TemplatesToUseFor1DIPFit A;C;P;D
+TemplatesToUseFor1DIPFit B;C;P;D
+TemplatesToUseFor2DIPFit AA;CC;BC;PP;DD;BD;CD
+# TemplatesToUseFor2DIPFit BB;CC;BC;PP;DD;BD;CD
+# TemplatesToUseFor2DIPFit DA
+# TemplatesToUseFor2DIPFit BB;DD;BD
+
+ConstrainIP 0
+ConstrainToComponentIP -1;-1;0;-1;-1;0;1
+ConstrainSumToComponentIP 310

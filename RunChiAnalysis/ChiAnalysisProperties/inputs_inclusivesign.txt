@@ -1,0 +1,2 @@
+INCLUDE ChiAnalysisProperties/inputs_ip_inclusivesign.txt
+INCLUDE ChiAnalysisProperties/inputs_ptout_inclusivesign.txt
